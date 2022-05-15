@@ -34,10 +34,10 @@ func StringSum(input string) (output string, err error) {
 	isAdd := false
 	operandCount := 1
 	for i := 1; i < len(input); i++ {
-		isAdd = input[i] == '+'
-		if isAdd || input[i] == '-' {
+		if input[i] == '+' || input[i] == '-' {
 			opIndex = i
 			operandCount++
+			isAdd = input[i] == '+'
 		}
 	}
 	if operandCount != 2 {
