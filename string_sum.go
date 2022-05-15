@@ -40,7 +40,7 @@ func StringSum(input string) (output string, err error) {
 			operandCount++
 		}
 	}
-	if operandCount > 2 {
+	if operandCount != 2 {
 		return "", fmt.Errorf("input error: %w", errorNotTwoOperands)
 	}
 
@@ -59,7 +59,7 @@ func StringSum(input string) (output string, err error) {
 	if isAdd {
 		output = strconv.Itoa(fNum + sNum)
 	} else {
-		output = strconv.Itoa(fNum + sNum)
+		output = strconv.Itoa(fNum - sNum)
 	}
 	return output, nil
 }
